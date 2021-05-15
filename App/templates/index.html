@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>DeepFake Detection</title>
+  <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/style3.css">
+
+</head>
+<body>
+
+
+<!-- partial:index.partial.html -->
+<div style="background-image: url('./static/background5.png');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;"/>
+
+
+
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<div class="container" >
+		<form id="contact"  method='POST' enctype="multipart/form-data">
+
+
+
+
+  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Browse</button>
+
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' id="image" name="image" onchange="readURL(this);" accept="video/mp4,video/x-m4v,video/*" />
+<!--    <input type="file" id="image" name="image" class="form-control" onchange="readURL(this);" autofocus>-->
+    <div class="drag-text">
+      <h3>Drag and drop a video file</h3>
+    </div>
+  </div>
+
+<br>
+        <h3>Enter the YouTube URL</h3>
+            <input id="text1" type="text" style="font-size:10pt;height:23px" name="url" value="" size="95">
+
+
+
+
+  <div class="file-upload-content">
+    <video class="file-upload-image" width="640" height="480" controls>
+    <source src="#" type="video/mp4">
+
+
+
+    </video>
+
+    <div class="image-title-wrap">
+      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Video</span></button>
+    </div>
+  </div>
+
+
+<!-- partial -->
+  <script  src="./static/js/script.js"></script>
+
+<button id="btn1" name="submit" type="submit" onclick="detect()" id="contact-submit">DETECT!</button>
+<div id="loader" style="display:none;" >
+          <div class="loader"></div>
+ </div>
+        </form>
+</div>
+
+</body>
+</html>
