@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+     <div class="container" >
+		<form id="contact"  method='POST' enctype="multipart/form-data">
+
+
+
+      <div class="row title" id="progress">DeepFake Detection in Progress
+          <br>
+
+
+      </div>
+
+       <div id="loader" class="loader"></div>
+
+            <div class="row title" id="predictionResult"></div>
+          <center><div hidden id="real"></div></center>
+          <center><div hidden id="fake"></div></center>
+
+             <a id="info" href="#">View more info</a>
+             <a id="cache" href="#">Clear Cache</a>
+        </form>
+    <script type="module" src="alert.js"></script>
+     </div>
+  </body>
+</html>

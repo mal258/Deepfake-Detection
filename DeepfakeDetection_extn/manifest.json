@@ -1,0 +1,39 @@
+{
+    "name": "DeepFake Detection",
+    "description": "DeepFake Detection",
+    "version": "1.0",
+    "manifest_version": 2,
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "permissions": [
+      "*://*/*",
+      "contextMenus",
+      "notifications",
+      "activeTab",
+      "downloads",
+      "declarativeContent",
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>",
+      "storage",
+      "tabs"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/DFD16.png",
+            "32": "/images/DFD32.png",
+            "48": "/images/DFD48.png",
+            "128": "/images/DFD128.png"
+          }
+      },
+    "icons": {
+      "16": "/images/DFD16.png",
+      "32": "/images/DFD32.png",
+      "48": "/images/DFD48.png",
+      "128": "/images/DFD128.png"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  }
