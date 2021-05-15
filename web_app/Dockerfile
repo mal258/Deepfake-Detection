@@ -1,13 +1,9 @@
-FROM python:3.7
+FROM python:3.6
 
-#RUN apt update && apt upgrade -y && apt install -y cmake
-RUN apt-get update && apt-get upgrade -y && apt-get install -y cmake && apt-get install -y libavcodec-dev && apt-get install -y libavformat-dev && apt-get install -y libavutil-dev && apt-get install -y libswscale-dev
+RUN apt update && apt upgrade -y && apt install -y cmake
+WORKDIR /app
+COPY . .
 
-WORKDIR ~/web
-COPY requirements.txt /tmp/
+RUN pip install -r requirements.txt
 
-RUN pip3 install -r /tmp/requirements.txt
-
-COPY App/ .
-
-ENTRYPOINT ["python3", "./app.py"]
+ENTRYPOINT ["bash"]

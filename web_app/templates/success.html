@@ -1,0 +1,47 @@
+<!-- from https://getbootstrap.com/docs/4.0/examples/sign-in/ -->
+<!doctype html>
+
+<html>
+  <head>
+
+  <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/style3.css">
+
+  </head>
+<body>
+
+<div style="background-image: url('./static/background5.png');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;">
+  <div class="container" >
+    <form id="contact"  method=get action="http://35.184.128.190:5008/">
+
+
+  <div class="file-upload-image">
+     {% if fake < 33 %}
+    <img src="./static/gauge1.png"/>
+      {% elif fake >= 33 and fake < 66 %}
+     <img src="./static/gauge1.png"/>
+    {% else %}
+     <img src="./static/gauge3.png"/>
+      {%endif%}
+      <br>
+
+
+        {% if real > 50 %}
+          <h3 style = "color:green", class="h3 mb-3 font-weight-normal">{{real}}% real</h3>
+        {% else %}
+          <h3 style = "color:red", class="h3 mb-3 font-weight-normal">{{fake}}% fake</h3>
+        {%endif%}
+  </div>
+
+  <video width="320" height="240" controls>
+    <source src={{ url_for('static', filename="pred_video.mp4") }} type="video/mp4">
+
+  </video>
+
+<button id="btn2" name="submit" type="submit"  id="contact-submit">Go Back</button>
+    </form>
+  </div>
+  </body>
+</html>
